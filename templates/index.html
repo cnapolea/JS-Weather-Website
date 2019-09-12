@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Weather website">
+    <meta name="author" content="Cristiano Napoleao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/skycons.js"></script>
+
+    <title>Live Weather</title>
+
+  </head>
+
+  <body>
+
+    <div class="temperature-display">
+
+      <div class="temperature-section">
+        <canvas id="icon-main" width="128" height="128"></canvas>
+        <div class="location">
+          <span class="location city">City</span>, <span class="location country">Country</span>
+        </div>
+        <div class="temperature">
+          <div id="temperature-degree">70</div>
+          <span id="unit">F</span>
+        </div>
+      </div>
+      <div class="temperature-description">
+        It is very cold!
+      </div>
+    </div>
+
+    <table class="table">
+
+      <thead>
+        <th class="weekdays">Weekdays</th>
+        <th class="temperature-level"></th>
+        <th class="temperature-level">Max</th>
+        <th class="temperature-level">Min</th>
+      </thead>
+
+    <tbody>
+      <tr>
+       <td id="today">Today</td>
+       <td><canvas id="today-icon" width="30" height="30"></canvas></td>
+       <td class="daily-temperature" id="today-temperature-max"></td>
+       <td class="daily-temperature" id="today-temperature-min"></td>
+      </tr>
+      <tr>
+       <td id="day2"></td>
+       <td><canvas id="day2-icon" width="30" height="30"></canvas></td>
+       <td class="daily-temperature" id="day2-temperature-max"></td>
+       <td class="daily-temperature" id="day2-temperature-min"></td>
+      </tr>
+      <tr>
+        <td id="day3"></td>
+        <td><canvas id="day3-icon" width="30" height="30"></canvas></td>
+        <td class="daily-temperature" id="day3-temperature-max"></td>
+        <td class="daily-temperature" id="day3-temperature-min"></td>
+      </tr>
+      <tr>
+        <td id="day4"></td>
+        <td><canvas id="day4-icon" width="30" height="30"></canvas></td>
+        <td class="daily-temperature" id="day4-temperature-max"></td>
+        <td class="daily-temperature" id="day4-temperature-min"></td>
+      </tr>
+      <tr>
+        <td id="day5"></td>
+        <td><canvas id="day5-icon" width="30" height="30"></canvas></td>
+        <td class="daily-temperature" id="day5-temperature-max"></td>
+        <td class="daily-temperature" id="day5-temperature-min"></td>
+      </tr>
+      <tr>
+        <td id="day6"></td>
+        <td><canvas id="day6-icon" width="30" height="30"></canvas></td>
+        <td class="daily-temperature" id="day6-temperature-max"></td>
+        <td class="daily-temperature" id="day6-temperature-min"></td>
+      </tr>
+    </tbody>
+    </table>
+
+  </body>
+
+</html>

@@ -1,0 +1,62 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+} */
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+  font-family: sans-serif;
+  color: #d66464 !important;
+}
+
+.temperature-display{
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 16vw;
+
+}
+
+.temperature{
+  display: flex;
+}
+
+#temperature-degree,
+#unit{
+  font-size: 70px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.location{
+  font-size: 40px;
+  font-weight: bold;
+}
+.temperature-description {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table thead .weekdays,
+.table thead .temperature-level {
+     border-top: none !important;
+ }
+
+.table{
+  width: 30% !important;
+  height: 60vh;
+  margin-left: 30vw;
+  border-radius: 5%;
+  color: #d66464 !important;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+.temperature-level{
+  font-size: 10px;
+}
