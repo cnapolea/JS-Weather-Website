@@ -1,62 +1,112 @@
-/* * {
+
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important;
-} */
+  box-sizing: border-box; /*Search and learn*/
+}
 
-body{
+.container {
+  width: 100vw;
   height: 100vh;
+  background: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+  font-family: sans-serif !important;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #FAACA8;
-  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
-  font-family: sans-serif;
-  color: #d66464 !important;
-}
-
-.temperature-display{
   justify-content: space-around;
-  flex-direction: column;
-  margin-left: 16vw;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 
 }
 
-.temperature{
+.main-display {
+  color: #d66464;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
-#temperature-degree,
-#unit{
-  font-size: 70px;
+  canvas {
+    width: auto;
+  }
+
+.main-display .location span {
+  font-size: 1.5em;
   font-weight: bold;
+}
+
+.location-temperature {
+  margin: 10px 0px;
+}
+
+.main-display .temperature {
   cursor: pointer;
 }
-.location{
-  font-size: 40px;
+
+.main-display .temperature span {
+  font-size: 3.4em;
+}
+
+.main-display .temperature-description {
+  font-size: 1.5em;
+  margin-bottom: 20px;
   font-weight: bold;
 }
-.temperature-description {
-  font-size: 20px;
-  font-weight: bold;
+
+.table {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 82%;
+  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  border-radius: 2%;
 }
 
-.table thead .weekdays,
-.table thead .temperature-level {
-     border-top: none !important;
- }
-
-.table{
-  width: 30% !important;
-  height: 60vh;
-  margin-left: 30vw;
-  border-radius: 5%;
-  color: #d66464 !important;
-  background-color: #8EC5FC;
-  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
+.table thead th {
+  border-top: none;
 }
 
-.temperature-level{
-  font-size: 10px;
+.table td, .table th{
+  color: #d66464;
+  padding: .15em !important;
+  vertical-align: middle !important;
+  border-top: groove #d3d3d32e;
+}
+
+.table .temperature-level {
+  font-weight: lighter;
+}
+
+@media only screen and (min-width: 860px) {
+  .container {
+    justify-content: space-around;
+  }
+
+  .main-display {
+    width: 51%;
+  }
+
+  .table {
+    width: 40%;
+    height: 46%;
+  }
+
+  canvas {
+    width: 30% !important;
+  }
+
+  .main-display .location span {
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+
+  .main-display .temperature span {
+    font-size: 5em;
+  }
+
+  .main-display .temperature-description {
+    font-size: 1.7em;
+    margin-bottom: 57px;
+    font-weight: bold;
+  }
 }

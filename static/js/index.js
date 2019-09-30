@@ -2,10 +2,18 @@
 
 window.addEventListener('load', () => {
 
+  /*
+  Parameters
+
+  @ date takes a date in string format 'YYYY-MM-DD HH-MM-SS'
+  @ Weekday is used in daily temperature Table
+  ----
+
+  */
+
   function setWeekDay(date) {
 
     date = date.replace(' ','T');
-    console.log(date);
     let dt = new Date(date);
 
     let weekdays = new Array(7);
@@ -20,6 +28,18 @@ window.addEventListener('load', () => {
     let weekday = weekdays[dt.getDay()];
     return weekday;
   }
+
+  /*
+  Parameters
+
+  @ iconID takes a DOM element through its ID
+  @ icon takes the icon name from the list provenient from the api which comes in the format e.g. 'mostly-cloudy'
+
+  Extra-Information
+
+  @ We are using the Skycons js file which enables us to use the Skycons object and its features,
+    and in order to recognize which icon to use, it needs to be in the format 'MOSTLY_CLOUDY'
+  */
 
   function setIcon(iconID, icon) {
     icon = icon.replace(/-/g, '_').toUpperCase();
@@ -41,7 +61,7 @@ window.addEventListener('load', () => {
     },
   };
 
-  let temperatureSection = document.querySelector('.temperature-section');
+  let temperatureSection = document.querySelector('.location-temperature');
 
   let unit = document.querySelector('#unit'),
       temperatureDegree = document.querySelector('#temperature-degree'),
@@ -119,6 +139,8 @@ window.addEventListener('load', () => {
             const {temperature, summary, icon} = data.currently;
             temperatureDegree.textContent = temperature.toFixed(0);
             temperatureDescription.textContent = summary;
+
+
 
             dailyTemperatures_2 = data.daily.data;
             todayMaxTemperature.textContent = dailyTemperatures_2[0].temperatureHigh.toFixed(0);
