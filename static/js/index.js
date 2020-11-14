@@ -121,11 +121,11 @@ window.addEventListener('load', () => {
 
           dailyTemperatures = [data.list[0], data.list[6], data.list[14], data.list[22], data.list[30], data.list[38]];
           // console.log(dailyTemperatures);
-          day2.textContent = setWeekDay(dailyTemperatures[0].dt_txt);
-          day3.textContent = setWeekDay(dailyTemperatures[1].dt_txt);
-          day4.textContent = setWeekDay(dailyTemperatures[2].dt_txt);
-          day5.textContent = setWeekDay(dailyTemperatures[3].dt_txt);
-          day6.textContent = setWeekDay(dailyTemperatures[4].dt_txt);
+          day2.textContent = setWeekDay(dailyTemperatures[1].dt_txt);
+          day3.textContent = setWeekDay(dailyTemperatures[2].dt_txt);
+          day4.textContent = setWeekDay(dailyTemperatures[3].dt_txt);
+          day5.textContent = setWeekDay(dailyTemperatures[4].dt_txt);
+          day6.textContent = setWeekDay(dailyTemperatures[5].dt_txt);
 
 
         })
